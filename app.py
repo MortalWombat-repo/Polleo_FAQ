@@ -168,7 +168,7 @@ def get_article_hr(user_query, embed_fn, collection, client, user_language):
     embed_fn.document_mode = False
 
     # Retrieve more results for better context
-    result = collection.query(query_texts=[user_query], n_results=3)
+    result = collection.query(query_texts=[user_query], n_results=7)
     # Check if documents were found
     if not result["documents"]:
         return "Ispričavamo se, ali ne mogu pronaći relevantan odgovor u našoj bazi FAQ. Molimo kontaktirajte našu podršku za više informacija." # Fallback if no docs found
