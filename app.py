@@ -119,7 +119,7 @@ def get_article(user_query, embed_fn, collection, client, user_language):
     # Switch to query mode when generating embeddings
     embed_fn.document_mode = False
 
-    result = collection.query(query_texts=[user_query], n_results=1)
+    result = collection.query(query_texts=[user_query], n_results=7)
     [all_passages] = result["documents"]
 
     query_oneline = user_query.replace("\n", " ")
